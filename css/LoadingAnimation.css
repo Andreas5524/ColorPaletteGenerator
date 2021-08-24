@@ -1,0 +1,78 @@
+﻿:root {
+    --circle-diameter: calc(2vmin + 25px);
+}
+
+#container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: calc(var(--circle-diameter) / -2);
+    margin-left: calc(var(--circle-diameter) * -2);
+    height: var(--circle-diameter);
+    width: calc(var(--circle-diameter) * 4);
+}
+
+.circle {
+    border-radius: 50%;
+    width: var(--circle-diameter);
+    height: var(--circle-diameter);
+    position: absolute;
+    background-color: #070808;
+}
+
+#circle1 {
+    animation: circle1Animation 1.5s linear 0s infinite normal;
+}
+
+#circle2 {
+    animation: circle2Animation 1.5s linear 0s infinite normal;
+}
+
+#circle3 {
+    animation: circle3Animation 1.5s linear 0s infinite normal;
+    left: calc(var(--circle-diameter) * 3);
+}
+
+@keyframes circle1Animation {
+    0% {
+        transform: scale(0);
+        left: 0;
+    }
+    20% {
+        transform: scale(1);
+    }
+    80% {
+        transform: scale(1);
+        left: 0;
+    }
+    100% {
+        left: calc(var(--circle-diameter) * 1.5);
+    }
+}
+
+@keyframes circle2Animation {
+    0% {
+        left: calc(var(--circle-diameter) * 1.5);
+    }
+    80% {
+        left: calc(var(--circle-diameter) * 1.5);
+    }
+    100% {
+        left: calc(var(--circle-diameter) * 3);
+    }
+}
+
+@keyframes circle3Animation {
+    0% {
+        transform: scale(1);
+    }
+    60% {
+        transform: scale(1);
+    }
+    80% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(0);
+    }
+}

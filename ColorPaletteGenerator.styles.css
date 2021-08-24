@@ -4,25 +4,25 @@ body[b-uuf0bdq07y] {
 }
 
 #GenerateButton[b-uuf0bdq07y] {
-    width: max(20vw, 250px);
+    font-size: 3vh;
+    width: 18ch;
     height: 8vh;
-    margin: 8vh auto 0 auto;
+    margin: 10vh auto 0 auto;
     display: block;
     position: relative;
     border: none;
     border-radius: 1.5vh;
-    transition: 50ms;
 }
 
 #GenerateButtonSide[b-uuf0bdq07y] {
-    width: max(20vw, 250px);
+    font-size: 3vh;
+    width: 18ch;
     height: 8vh;
 }
 
 #GenerateButtonText[b-uuf0bdq07y] {
     user-select: none;
     font-family: 'Roboto', sans-serif;
-    font-size: 3vh;
     white-space: nowrap;
     margin: 0 auto;
     text-align: center;
@@ -33,7 +33,8 @@ body[b-uuf0bdq07y] {
     width: 7vh;
     position: relative;
     border: none;
-    border-radius: 1.5vh
+    border-radius: 1.5vh;
+    vertical-align: top;
 }
 
 .ColorCountButtonSide[b-uuf0bdq07y] {
@@ -41,69 +42,90 @@ body[b-uuf0bdq07y] {
     height: 7vh;
 }
 
+.Button[b-uuf0bdq07y] {
+    transition: transform 25ms;
+}
+
 .Button:hover[b-uuf0bdq07y] {
-    transform: translate(0, 2px);
+    transform: translate(0, 0.25vh);
 }
 
 .Button:active[b-uuf0bdq07y] {
-    transform: translate(0, 6px);
+    transform: translate(0, 0.75vh);
 }
 
 .ButtonSide[b-uuf0bdq07y] {
     margin: 0 auto;
     position: absolute;
-    bottom: -6px;
+    bottom: -0.75vh;
     left: 0;
     right: 0;
     z-index: -1;
     border-radius: 1.5vh;
 }
 /* /Shared/ColorDisplay.razor.rz.scp.css */
-#Button[b-zm9nzr2geh] {
-    width: min(80vw, 750px);
-    height: 7vh;
+*[b-zm9nzr2geh] {
+    --width: 80vmin;
+    --height: 7vh;
+}
+
+.Button[b-zm9nzr2geh] {
+    width: var(--width);
+    height: var(--height);
     margin: 5vh auto 0 auto;
     padding: 1vh;
     display: flex;
     position: relative;
     border: none;
     border-radius: 1.5vh;
-    transition: 50ms;
+    transition: transform 25ms;
 }
 
-#Button:hover[b-zm9nzr2geh] {
-    transform: translate(0, 2px);
+.Button:hover[b-zm9nzr2geh] {
+    transform: translate(0, 0.25vh);
 }
 
-#Button:active[b-zm9nzr2geh] {
-    transform: translate(0, 6px);
+.Button:active[b-zm9nzr2geh] {
+    transform: translate(0, 0.75vh);
 }
 
-#ButtonSide[b-zm9nzr2geh] {
-    width: min(80vw, 750px);
-    height: 7vh;
+.ButtonSide[b-zm9nzr2geh] {
+    width: var(--width);
+    height: var(--height);
     margin: 0 auto;
     display: block;
     position: absolute;
-    bottom: -6px;
+    bottom: -0.75vh;
     left: 0;
     right: 0;
     z-index: -1;
     border-radius: 1.5vh;
 }
 
-#Color[b-zm9nzr2geh] {
+.Color[b-zm9nzr2geh] {
     width: 100%;
     height: 100%;
     border-radius: 0.5vh;
 }
 
-#HexText[b-zm9nzr2geh] {
+.HexText[b-zm9nzr2geh] {
     font-family: 'Roboto Mono', monospace;
     user-select: none;
-    font-size: 3vh;
     text-align: center;
     margin: 0;
+}
+
+.InvisibleBox[b-zm9nzr2geh] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: var(--width);
+    height: var(--height);
+    transition: transform 25ms;
+}
+
+.Button:hover .InvisibleBox[b-zm9nzr2geh] {
+    transform: translate(0, -0.25vh);
 }
 /* /Shared/MainLayout.razor.rz.scp.css */
 .page[b-z5kkf1fq1k] {

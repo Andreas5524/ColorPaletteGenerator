@@ -1,34 +1,30 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <title>Color Palette Generator</title>
+        <meta name="description" content="A free and easy-to-use tool that generates random color palettes consisting of 3-5 colors." />
+        <base href="/ColorPaletteGenerator/" />
+        <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+        <link href="ColorPaletteGenerator.styles.css" rel="stylesheet" />
+        <link href="css/LoadingAnimation.css" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+        <link rel="icon" href="Icon.png">
+        <meta name="google-site-verification" content="7_NC1S130ASFvOrIYjPJeFVcOS37HNeetPib1SkRGcA" />
+    </head>
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Color Palette Generator</title>
-    <base href="/ColorPaletteGenerator/" />
-    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/app.css" rel="stylesheet" />
-    <link href="ColorPaletteGenerator.styles.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="icon" href="Icon.png">
-</head>
+    <body style="background-color: #4a5555">
+        <div id="app">
+            <div id="container">
+                <div id="circle1" class="circle"></div>
+                <div id="circle2" class="circle"></div>
+                <div id="circle3" class="circle"></div>
+            </div>
+        </div>
 
-<body style="background-color: #2f3636">
-    <div id="app"></div>
-
-    <div id="blazor-error-ui">
-        An unhandled error has occurred.
-        <a href="" class="reload">Reload</a>
-        <a class="dismiss">🗙</a>
-    </div>
-    <script src="_framework/blazor.webassembly.js"></script>
-</body>
-
+        <script src="_framework/blazor.webassembly.js"></script>
+        <script src="js/JavaScript.js"></script>
+    </body>
 </html>
-
-<script>
-    window.clipboardCopy = {
-        copyText: function (text) { navigator.clipboard.writeText(text).then(function () { }) }
-    };
-</script>
