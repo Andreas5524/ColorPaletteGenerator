@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#242526"/>
+    <meta name="description" content="A free and easy-to-use tool that generates random color palettes consisting of 2-8 colors.">
+    <title>Color Palette Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="scrollbar.css">
+    <link rel="stylesheet" href="tooltips.css">
+    <link rel="stylesheet" href="print.css" media="print">
+    <link rel="icon" href="icon192.png">
+    <link rel="apple-touch-icon" href="iconMaskable192.png">
+    <link rel="manifest" href="manifest.webmanifest">
+</head>
+<body>
+    <div id="site">
+        <div class="button-container" style="margin-top: 100px">
+            <button id="previous-palette-button" class="square-button" disabled>
+                <div class="button-tooltip">Previous palette</div>
+                <div class="button-tooltip-triangle"></div>
+                <svg class="button-icon" viewBox="0 0 26.458 26.458" xmlns="http://www.w3.org/2000/svg"><path d="m11.578 2.9745c-0.2105 3.21e-5 -0.41237 0.08368-0.5612 0.23254l-9.4609 9.4609c-0.3099 0.30996-0.3099 0.81245 0 1.1224l9.4609 9.4609c0.30996 0.3099 0.81244 0.3099 1.1224 0l0.74879-0.74828c0.3099-0.30996 0.3099-0.81245 0-1.1224l-6.49-6.4895a0.19844 0.19844 0 0 1 0.14004-0.339h17.804a0.79375 0.79375 0 0 0 0.79375-0.79375v-1.0583a0.79375 0.79375 0 0 0-0.79375-0.79375h-17.804a0.19844 0.19844 0 0 1-0.14004-0.339l6.49-6.4895c0.3099-0.30996 0.3099-0.81245 0-1.1224l-0.74879-0.74827c-0.14883-0.14886-0.3507-0.23251-0.56121-0.23254z" stroke-width=".25753"/></svg>
+            </button>
+            <button id="randomize-button" class="square-button">
+                <div class="button-tooltip">Randomize palette</div>
+                <div class="button-tooltip-triangle"></div>
+                <svg class="button-icon" viewBox="0 0 26.458 26.458" xmlns="http://www.w3.org/2000/svg"><g><path transform="scale(.26458)" d="m0 6v88a6 6 45 0 0 6 6h88a6 6 135 0 0 6-6v-88a6 6 45 0 0-6-6h-88a6 6 135 0 0-6 6zm11 4h78a1 1 45 0 1 1 1v78a1 1 135 0 1-1 1h-78a1 1 45 0 1-1-1v-78a1 1 135 0 1 1-1z" stroke-width="1.0016"/><g stroke-width=".265"><circle cx="7.276" cy="7.276" r="1.9844"/><circle cx="19.182" cy="7.276" r="1.9844"/><circle cx="19.182" cy="19.182" r="1.9844"/><circle cx="7.276" cy="19.182" r="1.9844"/><circle cx="13.229" cy="13.229" r="1.9844"/></g></g></svg>
+            </button>
+        </div>
+        <div class="color-container">
+            <div class="color"></div>
+            <button class="copy-color-button square-button">
+                <div class="button-tooltip">Copy to clipboard</div>
+                <div class="button-tooltip-triangle"></div>
+                <svg class="button-icon" viewBox="0 0 26.458 26.458" xmlns="http://www.w3.org/2000/svg"><g stroke-width=".265"><path d="m2.9104 0a1.5875 1.5875 0 0 0-1.5875 1.5875v18.785a0.79375 0.79375 0 0 0 0.79375 0.79375h1.0583a0.79375 0.79375 0 0 0 0.79375-0.79375v-17.462a0.26458 0.26458 0 0 1 0.26458-0.26458h14.817a0.79375 0.79375 0 0 0 0.79375-0.79375v-1.0583a0.79375 0.79375 0 0 0-0.79375-0.79375h-15.081z"/><path d="m8.2021 5.2917a1.5875 1.5875 0 0 0-1.5875 1.5875v17.992a1.5875 1.5875 0 0 0 1.5875 1.5875h15.346a1.5875 1.5875 0 0 0 1.5875-1.5875v-17.992a1.5875 1.5875 0 0 0-1.5875-1.5875zm1.3229 2.6458h12.7a0.26458 0.26458 0 0 1 0.26458 0.26458v15.346a0.26458 0.26458 0 0 1-0.26458 0.26458h-12.7a0.26458 0.26458 0 0 1-0.26458-0.26458v-15.346a0.26458 0.26458 0 0 1 0.26458-0.26458z"/></g></svg>
+            </button>
+        </div>
+        <div class="color-container">
+            <div class="color"></div>
+            <button class="copy-color-button square-button">
+                <div class="button-tooltip">Copy to clipboard</div>
+                <div class="button-tooltip-triangle"></div>
+                <svg class="button-icon" viewBox="0 0 26.458 26.458" xmlns="http://www.w3.org/2000/svg"><g stroke-width=".265"><path d="m2.9104 0a1.5875 1.5875 0 0 0-1.5875 1.5875v18.785a0.79375 0.79375 0 0 0 0.79375 0.79375h1.0583a0.79375 0.79375 0 0 0 0.79375-0.79375v-17.462a0.26458 0.26458 0 0 1 0.26458-0.26458h14.817a0.79375 0.79375 0 0 0 0.79375-0.79375v-1.0583a0.79375 0.79375 0 0 0-0.79375-0.79375h-15.081z"/><path d="m8.2021 5.2917a1.5875 1.5875 0 0 0-1.5875 1.5875v17.992a1.5875 1.5875 0 0 0 1.5875 1.5875h15.346a1.5875 1.5875 0 0 0 1.5875-1.5875v-17.992a1.5875 1.5875 0 0 0-1.5875-1.5875zm1.3229 2.6458h12.7a0.26458 0.26458 0 0 1 0.26458 0.26458v15.346a0.26458 0.26458 0 0 1-0.26458 0.26458h-12.7a0.26458 0.26458 0 0 1-0.26458-0.26458v-15.346a0.26458 0.26458 0 0 1 0.26458-0.26458z"/></g></svg>
+            </button>
+        </div>
+        <div class="color-container">
+            <div class="color"></div>
+            <button class="copy-color-button square-button">
+                <div class="button-tooltip">Copy to clipboard</div>
+                <div class="button-tooltip-triangle"></div>
+                <svg class="button-icon" viewBox="0 0 26.458 26.458" xmlns="http://www.w3.org/2000/svg"><g stroke-width=".265"><path d="m2.9104 0a1.5875 1.5875 0 0 0-1.5875 1.5875v18.785a0.79375 0.79375 0 0 0 0.79375 0.79375h1.0583a0.79375 0.79375 0 0 0 0.79375-0.79375v-17.462a0.26458 0.26458 0 0 1 0.26458-0.26458h14.817a0.79375 0.79375 0 0 0 0.79375-0.79375v-1.0583a0.79375 0.79375 0 0 0-0.79375-0.79375h-15.081z"/><path d="m8.2021 5.2917a1.5875 1.5875 0 0 0-1.5875 1.5875v17.992a1.5875 1.5875 0 0 0 1.5875 1.5875h15.346a1.5875 1.5875 0 0 0 1.5875-1.5875v-17.992a1.5875 1.5875 0 0 0-1.5875-1.5875zm1.3229 2.6458h12.7a0.26458 0.26458 0 0 1 0.26458 0.26458v15.346a0.26458 0.26458 0 0 1-0.26458 0.26458h-12.7a0.26458 0.26458 0 0 1-0.26458-0.26458v-15.346a0.26458 0.26458 0 0 1 0.26458-0.26458z"/></g></svg>
+            </button>
+        </div>
+        <div class="color-container">
+            <div class="color"></div>
+            <button class="copy-color-button square-button">
+                <div class="button-tooltip">Copy to clipboard</div>
+                <div class="button-tooltip-triangle"></div>
+                <svg class="button-icon" viewBox="0 0 26.458 26.458" xmlns="http://www.w3.org/2000/svg"><g stroke-width=".265"><path d="m2.9104 0a1.5875 1.5875 0 0 0-1.5875 1.5875v18.785a0.79375 0.79375 0 0 0 0.79375 0.79375h1.0583a0.79375 0.79375 0 0 0 0.79375-0.79375v-17.462a0.26458 0.26458 0 0 1 0.26458-0.26458h14.817a0.79375 0.79375 0 0 0 0.79375-0.79375v-1.0583a0.79375 0.79375 0 0 0-0.79375-0.79375h-15.081z"/><path d="m8.2021 5.2917a1.5875 1.5875 0 0 0-1.5875 1.5875v17.992a1.5875 1.5875 0 0 0 1.5875 1.5875h15.346a1.5875 1.5875 0 0 0 1.5875-1.5875v-17.992a1.5875 1.5875 0 0 0-1.5875-1.5875zm1.3229 2.6458h12.7a0.26458 0.26458 0 0 1 0.26458 0.26458v15.346a0.26458 0.26458 0 0 1-0.26458 0.26458h-12.7a0.26458 0.26458 0 0 1-0.26458-0.26458v-15.346a0.26458 0.26458 0 0 1 0.26458-0.26458z"/></g></svg>
+            </button>
+        </div>
+        <div class="color-container">
+            <div class="color"></div>
+            <button class="copy-color-button square-button">
+                <div class="button-tooltip">Copy to clipboard</div>
+                <div class="button-tooltip-triangle"></div>
+                <svg class="button-icon" viewBox="0 0 26.458 26.458" xmlns="http://www.w3.org/2000/svg"><g stroke-width=".265"><path d="m2.9104 0a1.5875 1.5875 0 0 0-1.5875 1.5875v18.785a0.79375 0.79375 0 0 0 0.79375 0.79375h1.0583a0.79375 0.79375 0 0 0 0.79375-0.79375v-17.462a0.26458 0.26458 0 0 1 0.26458-0.26458h14.817a0.79375 0.79375 0 0 0 0.79375-0.79375v-1.0583a0.79375 0.79375 0 0 0-0.79375-0.79375h-15.081z"/><path d="m8.2021 5.2917a1.5875 1.5875 0 0 0-1.5875 1.5875v17.992a1.5875 1.5875 0 0 0 1.5875 1.5875h15.346a1.5875 1.5875 0 0 0 1.5875-1.5875v-17.992a1.5875 1.5875 0 0 0-1.5875-1.5875zm1.3229 2.6458h12.7a0.26458 0.26458 0 0 1 0.26458 0.26458v15.346a0.26458 0.26458 0 0 1-0.26458 0.26458h-12.7a0.26458 0.26458 0 0 1-0.26458-0.26458v-15.346a0.26458 0.26458 0 0 1 0.26458-0.26458z"/></g></svg>
+            </button>
+        </div>
+        <div class="color-container">
+            <div class="color"></div>
+            <button class="copy-color-button square-button">
+                <div class="button-tooltip">Copy to clipboard</div>
+                <div class="button-tooltip-triangle"></div>
+                <svg class="button-icon" viewBox="0 0 26.458 26.458" xmlns="http://www.w3.org/2000/svg"><g stroke-width=".265"><path d="m2.9104 0a1.5875 1.5875 0 0 0-1.5875 1.5875v18.785a0.79375 0.79375 0 0 0 0.79375 0.79375h1.0583a0.79375 0.79375 0 0 0 0.79375-0.79375v-17.462a0.26458 0.26458 0 0 1 0.26458-0.26458h14.817a0.79375 0.79375 0 0 0 0.79375-0.79375v-1.0583a0.79375 0.79375 0 0 0-0.79375-0.79375h-15.081z"/><path d="m8.2021 5.2917a1.5875 1.5875 0 0 0-1.5875 1.5875v17.992a1.5875 1.5875 0 0 0 1.5875 1.5875h15.346a1.5875 1.5875 0 0 0 1.5875-1.5875v-17.992a1.5875 1.5875 0 0 0-1.5875-1.5875zm1.3229 2.6458h12.7a0.26458 0.26458 0 0 1 0.26458 0.26458v15.346a0.26458 0.26458 0 0 1-0.26458 0.26458h-12.7a0.26458 0.26458 0 0 1-0.26458-0.26458v-15.346a0.26458 0.26458 0 0 1 0.26458-0.26458z"/></g></svg>
+            </button>
+        </div>
+        <div class="color-container">
+            <div class="color"></div>
+            <button class="copy-color-button square-button">
+                <div class="button-tooltip">Copy to clipboard</div>
+                <div class="button-tooltip-triangle"></div>
+                <svg class="button-icon" viewBox="0 0 26.458 26.458" xmlns="http://www.w3.org/2000/svg"><g stroke-width=".265"><path d="m2.9104 0a1.5875 1.5875 0 0 0-1.5875 1.5875v18.785a0.79375 0.79375 0 0 0 0.79375 0.79375h1.0583a0.79375 0.79375 0 0 0 0.79375-0.79375v-17.462a0.26458 0.26458 0 0 1 0.26458-0.26458h14.817a0.79375 0.79375 0 0 0 0.79375-0.79375v-1.0583a0.79375 0.79375 0 0 0-0.79375-0.79375h-15.081z"/><path d="m8.2021 5.2917a1.5875 1.5875 0 0 0-1.5875 1.5875v17.992a1.5875 1.5875 0 0 0 1.5875 1.5875h15.346a1.5875 1.5875 0 0 0 1.5875-1.5875v-17.992a1.5875 1.5875 0 0 0-1.5875-1.5875zm1.3229 2.6458h12.7a0.26458 0.26458 0 0 1 0.26458 0.26458v15.346a0.26458 0.26458 0 0 1-0.26458 0.26458h-12.7a0.26458 0.26458 0 0 1-0.26458-0.26458v-15.346a0.26458 0.26458 0 0 1 0.26458-0.26458z"/></g></svg>
+            </button>
+        </div>
+        <div class="color-container">
+            <div class="color"></div>
+            <button class="copy-color-button square-button">
+                <div class="button-tooltip">Copy to clipboard</div>
+                <div class="button-tooltip-triangle"></div>
+                <svg class="button-icon" viewBox="0 0 26.458 26.458" xmlns="http://www.w3.org/2000/svg"><g stroke-width=".265"><path d="m2.9104 0a1.5875 1.5875 0 0 0-1.5875 1.5875v18.785a0.79375 0.79375 0 0 0 0.79375 0.79375h1.0583a0.79375 0.79375 0 0 0 0.79375-0.79375v-17.462a0.26458 0.26458 0 0 1 0.26458-0.26458h14.817a0.79375 0.79375 0 0 0 0.79375-0.79375v-1.0583a0.79375 0.79375 0 0 0-0.79375-0.79375h-15.081z"/><path d="m8.2021 5.2917a1.5875 1.5875 0 0 0-1.5875 1.5875v17.992a1.5875 1.5875 0 0 0 1.5875 1.5875h15.346a1.5875 1.5875 0 0 0 1.5875-1.5875v-17.992a1.5875 1.5875 0 0 0-1.5875-1.5875zm1.3229 2.6458h12.7a0.26458 0.26458 0 0 1 0.26458 0.26458v15.346a0.26458 0.26458 0 0 1-0.26458 0.26458h-12.7a0.26458 0.26458 0 0 1-0.26458-0.26458v-15.346a0.26458 0.26458 0 0 1 0.26458-0.26458z"/></g></svg>
+            </button>
+        </div>
+        <div class="button-container" style="margin-bottom: 100px">
+            <button id="add-color-button" class="square-button">
+                <div class="button-tooltip">Add color</div>
+                <div class="button-tooltip-triangle"></div>
+                <svg class="button-icon" viewBox="0 0 26.458 26.458" xmlns="http://www.w3.org/2000/svg"><path transform="scale(.26458)" d="m45 8v36a1 1 135 0 1-1 1h-36a3 3 135 0 0-3 3v4a3 3 45 0 0 3 3h36a1 1 45 0 1 1 1v36a3 3 45 0 0 3 3h4a3 3 135 0 0 3-3v-36a1 1 135 0 1 1-1h36a3 3 135 0 0 3-3v-4a3 3 45 0 0-3-3h-36a1 1 45 0 1-1-1v-36a3 3 45 0 0-3-3h-4a3 3 135 0 0-3 3z" stroke-width="1.0623"/></svg>
+            </button>
+            <button id="remove-color-button" class="square-button">
+                <div class="button-tooltip">Remove color</div>
+                <div class="button-tooltip-triangle"></div>
+                <svg class="button-icon" viewBox="0 0 26.458 26.458" xmlns="http://www.w3.org/2000/svg"><path x="1.3229166" y="11.90625" width="23.8125" height="2.6458333" d="m2.1167 11.906h22.225a0.79375 0.79375 45 0 1 0.79375 0.79375v1.0583a0.79375 0.79375 135 0 1-0.79375 0.79375h-22.225a0.79375 0.79375 45 0 1-0.79375-0.79375v-1.0583a0.79375 0.79375 135 0 1 0.79375-0.79375z" stroke-width=".265"/></svg>
+            </button>
+            <button id="download-palette-button" class="square-button">
+                <div class="button-tooltip">Download palette</div>
+                <div class="button-tooltip-triangle"></div>
+                <svg class="button-icon" viewBox="0 0 26.458 26.458" xmlns="http://www.w3.org/2000/svg"><g><path d="m2.1166 21.166a0.79374 0.79374 0 0 0-0.79374 0.79374v2.9104a1.5875 1.5875 0 0 0 1.5875 1.5875h20.637a1.5875 1.5875 0 0 0 1.5875-1.5875v-2.9104a0.79374 0.79374 0 0 0-0.79374-0.79374h-1.0583a0.79374 0.79374 0 0 0-0.79374 0.79374v1.5875a0.26458 0.26458 0 0 1-0.26458 0.26458h-17.991a0.26458 0.26458 0 0 1-0.26458-0.26458v-1.5875a0.79374 0.79374 0 0 0-0.79374-0.79374z" stroke-width=".28107"/><path transform="scale(.26458)" d="m48 0c-1.6569 0-3 1.3431-3 3v51.049c-9.9e-5 0.66875-0.80919 1.003-1.2812 0.5293l-12.811-12.812c-1.1715-1.1713-3.0707-1.1713-4.2422 0l-2.8301 2.8281c-1.1713 1.1715-1.1713 3.0707 0 4.2422l24.043 24.043c1.1715 1.1713 3.0707 1.1713 4.2422 0l24.043-24.043c1.1713-1.1715 1.1713-3.0707 0-4.2422l-2.8301-2.8281c-1.1715-1.1713-3.0707-1.1713-4.2422 0l-12.811 12.812c-0.47206 0.4737-1.2812 0.13946-1.2812-0.5293v-51.049c0-1.6569-1.3431-3-3-3z" stroke-width=".9676"/></g></svg>
+            </button>
+        </div>
+    </div>
+    <script src="javaScript.js"></script>
+    <script src="tooltips.js"></script>
+</body>
+</html>

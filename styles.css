@@ -1,0 +1,152 @@
+* {
+    --small-gap: 15px;
+    --large-gap: 25px;
+    --padding: 7px;
+    --outer-border-radius: 15px;
+    --inner-border-radius: calc(var(--outer-border-radius) - var(--padding));
+    --inner-height: 65px;
+
+    --color-e0: #121314;
+    --color-e0-85: #dbdbdb;
+    --color-e0-60: #a0a0a1;
+    --color-e0-40: #707172;
+    --color-e0-h: #1b1c1d;
+    --color-e0-h-85: #dddddd;
+    --color-e0-h-60: #a3a4a4;
+    --color-e0-h-40: #767677;
+    --color-e0-p: #2a2b2b;
+    --color-e0-p-85: #dfdfdf;
+    --color-e0-p-60: #a9aaaa;
+    --color-e0-p-40: #7f7f7f;
+    --color-e0-f: #2e2f30;
+    --color-e0-f-85: #dfe0e0;
+    --color-e0-f-60: #ababac;
+    --color-e0-f-40: #818282;
+    --color-e1: #242526;
+    --color-e1-85: #dedede;
+    --color-e1-60: #a7a7a8;
+    --color-e1-40: #7b7c7c;
+    --color-e1-h: #2c2d2e;
+    --color-e1-h-85: #dfdfdf;
+    --color-e1-h-60: #aaabab;
+    --color-e1-h-40: #808181;
+    --color-e1-p: #3a3b3c;
+    --color-e1-p-85: #e1e1e1;
+    --color-e1-p-60: #b0b0b1;
+    --color-e1-p-40: #88898a;
+    --color-e1-f: #3e3f40;
+    --color-e1-f-85: #e2e2e2;
+    --color-e1-f-60: #b1b2b2;
+    --color-e1-f-40: #8b8b8c;
+    --color-e2: #383839;
+    --color-e2-85: #e1e1e1;
+    --color-e2-60: #afafaf;
+    --color-e2-40: #878788;
+    --color-e2-h: #3f3f40;
+    --color-e2-h-85: #e2e2e2;
+    --color-e2-h-60: #b2b2b2;
+    --color-e2-h-40: #8b8b8c;
+    --color-e2-p: #4c4c4d;
+    --color-e2-p-85: #e4e4e4;
+    --color-e2-p-60: #b7b7b7;
+    --color-e2-p-40: #939394;
+    --color-e2-f: #505051;
+    --color-e2-f-85: #e4e4e5;
+    --color-e2-f-60: #b9b9b9;
+    --color-e2-f-40: #969696;
+}
+
+body {
+    margin: 0;
+    background-color: var(--color-e0);
+}
+
+#site {
+    position: relative;
+    overflow-x: hidden;
+}
+
+button {
+    display: block;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    -webkit-tap-highlight-color: transparent;
+}
+
+button:disabled {
+    cursor: not-allowed;
+}
+
+.button-container {
+    width: fit-content;
+    display: flex;
+    gap: var(--padding);
+    padding: var(--padding);
+    border-radius: var(--outer-border-radius);
+    background-color: var(--color-e1);
+    margin: var(--large-gap) auto;
+}
+
+.square-button {
+    width: var(--inner-height);
+    height: var(--inner-height);
+    background-color: transparent;
+    border-radius: var(--inner-border-radius);
+    transition: background-color 50ms;
+}
+
+.square-button:hover:not(:disabled) {
+    background-color: var(--color-e1-h);
+}
+
+.square-button:focus-visible:not(:disabled) {
+    background-color: var(--color-e1-f);
+    outline: 3px solid var(--color-e1-f-85);
+}
+
+.square-button:active:not(:disabled) {
+    background-color: var(--color-e1-p);
+}
+
+.button-icon {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    left: 25%;
+    top: 25%;
+    fill: var(--color-e1-85);
+}
+
+.square-button:hover:not(:disabled) .button-icon {
+    fill: var(--color-e1-h-85);
+}
+
+.square-button:focus-visible:not(:disabled) .button-icon {
+    fill: var(--color-e1-f-85);
+}
+
+.square-button:active:not(:disabled) .button-icon {
+    fill: var(--color-e1-p-85);
+}
+
+.square-button:disabled .button-icon {
+    fill: var(--color-e1-40);
+}
+
+.color-container {
+    width: min(80vw, 600px);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--padding);
+    padding: var(--padding);
+    border-radius: var(--outer-border-radius);
+    background-color: var(--color-e1);
+    margin: var(--small-gap) auto;
+}
+
+.color {
+    height: var(--inner-height);
+    border-radius: var(--inner-border-radius);
+    flex-grow: 1;
+}

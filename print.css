@@ -1,0 +1,13 @@
+.button-container, .square-button {
+    display: none;
+}
+
+.color-container {
+    visibility: hidden;
+}
+
+.color {
+    visibility: visible;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
